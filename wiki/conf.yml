@@ -20,7 +20,7 @@ theme:
     accent: "white"
   extra_css:
    - stylesheets/extra.css
-  custom_dir: overrides
+ # custom_dir: overrides
 
 markdown_extensions:
   - pymdownx.highlight:
