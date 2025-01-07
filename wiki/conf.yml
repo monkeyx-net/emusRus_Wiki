@@ -1,10 +1,10 @@
 # Site configuration
 
-site_name: EmusRUs Wiki
-site_description: EmusRUS Wiki
+site_name: EMUSRUS Wiki
+site_description: EMUSRUS Wiki
 
 # Copyright
-copyright: "&copy; 2025 EmusRus Team"
+copyright: "&copy; 2025 EMURUS Team"
 
 # Theme Configuration
 theme:
@@ -20,7 +20,7 @@ theme:
     accent: "white"
   extra_css:
    - stylesheets/extra.css
- # custom_dir: overrides
+  custom_dir: overrides
 
 markdown_extensions:
   - pymdownx.highlight:
