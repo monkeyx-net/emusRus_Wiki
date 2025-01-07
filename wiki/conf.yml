@@ -1,0 +1,71 @@
+# Site configuration
+
+site_name: EmusRUs Wiki
+site_description: EmusRUS Wiki
+
+# Copyright
+copyright: "&copy; 2025 EmusRus Team"
+
+# Theme Configuration
+theme:
+  name: material
+  language: "en"
+  logo: icons/systems/emusRus_icon.png
+  features:
+   - navigation.path
+   - content.code.copy
+  palette:
+    scheme: slate
+    primary: "blue"
+    accent: "white"
+  extra_css:
+   - stylesheets/extra.css
+  custom_dir: overrides
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+
+# Used to create custom emoji/icons using .svg files. See link for usage information
+# https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#additional-icons
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
+  - pymdownx.superfences
+  - attr_list
+
+plugins:
+  - search
+  - mkdocs-audio:
+  - mkdocs-video:
+      is_video: True
+      video_controls: True
+  - blog:
+      enabled: true
+      post_url_date_format: dd/MM/yyyy
+      post_date_format: full
+      blog_toc: true
+      archive: true
+      archive_date_format: yyyy
+      pagination: false
+      post_excerpt: required
+      post_excerpt_separator: <!-- more -->
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
+# Sidebar Navigation
+
+nav:
+
+  - FAQ ❔:
+
+    - Documentation & Wiki: wiki_faq/faq-documentation.md
